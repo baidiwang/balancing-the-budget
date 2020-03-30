@@ -14,8 +14,10 @@ $("body").on("keyup keydown keypress change", ".department input", function (e) 
 
 	if (running_total >= 0 && running_total <= 20) {
 		$(".total_budget").addClass("warning");
+		alert("You are getting close to budget. Make good choices.");
 	} else if (running_total < 0) {
 		$(".total_budget").addClass("error").removeClass("warning");
+		alert("You are over budget! Make some changes.");
 	} else {
 		$(".total_budget").removeClass("error warning");
 	}
